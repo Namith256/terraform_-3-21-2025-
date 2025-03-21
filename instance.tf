@@ -5,6 +5,14 @@ resource "aws_instance" "example" {
   key_name          = var.key_name
   availability_zone = data.aws_availability_zones.available.names[count.index]
 
+
+  tags = {
+    Name = "${var.tag_name}-${count.index}"
+  }
+}
+
+
+
   # availability_zone = data.aws_availability_zones.available.names[count.index]
 
   # availability_zone = lookup(var.az, var.region)
@@ -16,7 +24,3 @@ resource "aws_instance" "example" {
   # }
 
 
-  tags = {
-    Name = "${var.tag_name}-${count.index}"
-  }
-}

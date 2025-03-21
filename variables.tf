@@ -1,7 +1,3 @@
-# variable "ami_id" {
-#   type    = string
-#   default = "ami-0c2e61fdcb5495691"
-# }
 variable "ami_id" {
   type = map(any)
   default = {
@@ -33,6 +29,18 @@ variable "num_instances" {
 variable "region" {
   type = string
 }
+
+
+
+
+
+
+# variable "ami_id" {
+#   type    = string
+#   default = "ami-0c2e61fdcb5495691"
+# }
+
+
 
 # variable "az" {
 #   type    = list(string)
