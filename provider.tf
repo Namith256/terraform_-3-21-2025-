@@ -1,6 +1,6 @@
 provider "aws" {
-  region                   = "eu-north-1"
-  shared_config_files      = ["~/.aws/config"]
   shared_credentials_files = ["~/.aws/credentials"]
-  profile                  = "dev"
+  # shared_config_files      = ["~/.aws/config"]
+  region=var.region
+  profile = "dev"
 }
